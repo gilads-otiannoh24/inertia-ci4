@@ -28,14 +28,13 @@ describe('Inertia Response Tests', function () {
         /** @var FeatureRequestTestCase $this */
         $result = $this->withRoutes($routes)->withBodyFormat('json')->get('/user/123');
 
-        $user     = ['name' => 'Jonathon'];
+        $user = ['name' => 'Jonathon'];
         $response = new Response('User/Edit', ['user' => $user], '123');
-        $view     = $response->toResponse($result->request());
-        $page     = $view->getData()['page'];
+        $view = $response->toResponse($result->request());
+        $page = $view->getData()['page'];
 
         expect($result->response())->toBeInstanceOf(HTTPResponse::class);
         expect($view)->toBeInstanceOf(View::class);
-
         expect($page)->toHaveKeys(['component', 'props.user.name', 'url', 'version']);
 
         expect($page['version'])->toEqual('123');
@@ -53,10 +52,10 @@ describe('Inertia Response Tests', function () {
         /** @var FeatureRequestTestCase $this */
         $result = $this->withRoutes($routes)->withHeaders($headers)->get('/user/123');
 
-        $user     = ['name' => 'Jonathon'];
+        $user = ['name' => 'Jonathon'];
         $response = new Response('User/Edit', ['user' => $user], '123');
-        $view     = $response->toResponse($result->request());
-        $page     = json_decode($view->getJSON());
+        $view = $response->toResponse($result->request());
+        $page = json_decode($view->getJSON());
 
         expect($view)->toBeInstanceOf(HTTPResponse::class);
 

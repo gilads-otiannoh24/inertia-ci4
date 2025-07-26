@@ -40,9 +40,9 @@ class Middleware implements FilterInterface
     public function withShare(RequestInterface $request): array
     {
         return [
-            'alert'  => static fn () => session()->getFlashdata('alert'),
-            'errors' => fn () => $this->resolveValidationErrors($request),
-            'flash'  => static fn () => ['success' => session()->getFlashdata('success'), 'error' => session()->getFlashdata('error')],
+            'alert' => static fn() => session()->getFlashdata('alert'),
+            'errors' => fn() => $this->resolveValidationErrors($request),
+            'flash' => static fn() => ['success' => session()->getFlashdata('success'), 'error' => session()->getFlashdata('error')],
         ];
     }
 
@@ -51,7 +51,7 @@ class Middleware implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null): void
     {
-        Inertia::version(fn () => $this->withVersion());
+        Inertia::version(fn() => $this->withVersion());
         Inertia::share($this->withShare($request));
     }
 
@@ -74,7 +74,7 @@ class Middleware implements FilterInterface
             return $response;
         }
 
-        if (request()->is('get') && Http::getHeaderValue('X-Inertia-Version')  !== Inertia::getVersion()) {
+        if (request()->is('get') && Http::getHeaderValue('X-Inertia-Version') !== Inertia::getVersion()) {
             $response = $this->onVersionChange($request);
         }
 

@@ -1,17 +1,36 @@
-# Inertia CI 4
+# Inertia CI 4 (Forked & Extended)
 
-`inertia-ci4` is the bridge you need to seamlessly integrate the power of [Inertia.JS](https://inertiajs.com/) into your CodeIgniter 4 projects. It simplifies building server-driven single-page applications (SPAs) by harmonizing _Inertia.js_ with the elegance of CodeIgniter 4's backend.
+This is a **fork of [`fabithub/inertia-ci4`](https://github.com/fabithub/inertia-ci4)**—a package that bridges the power of [Inertia.js](https://inertiajs.com/) with the simplicity of **CodeIgniter 4**. This fork introduces improvements, enhancements, and possibly new features aimed at extending its capabilities and better suiting custom use cases.
 
-## Why inertia-ci4?
-- **Unite Backend with Frontend:** Enjoy the best of both worlds by effortlessly blending the robustness of CodeIgniter 4's backend with the interactivity of _Inertia.js_ on the frontend.
-- **Streamlined Development:** Say goodbye to managing separate frontend and backend applications. With inertia-ci4, streamline your development workflow.
+> ⚠️ If you're looking for the original package, visit: [https://github.com/fabithub/inertia-ci4](https://github.com/fabithub/inertia-ci4)
 
-## Getting Started
+---
+
+## 🔄 What’s Different in This Fork?
+
+> _Describe your changes here. For example:_
+
+-   Support for Laravel Mix v6+ or Vite
+-   Refactored Inertia response builder
+-   Middleware changes
+-   More intuitive shared data setup
+-   etc.
+
+---
+
+## 💡 Why inertia-ci4?
+
+-   **Unite Backend with Frontend:** Enjoy the best of both worlds by blending CodeIgniter 4's robustness with the interactivity of _Inertia.js_.
+-   **Streamlined Development:** Forget managing two separate apps. Inertia provides a smoother SPA development flow—now within CodeIgniter.
+
+---
+
+## 🚀 Getting Started
 
 ### Installation
 
 Install via Composer:
 
-```shell
-composer require fabithub/inertia-ci4
+```bash
+composer require jengo/inertia-ci4
 ```

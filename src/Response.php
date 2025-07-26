@@ -23,14 +23,14 @@ class Response
     /**
      * @var array<string, mixed>
      */
-    protected array $props      = [];
+    protected array $props = [];
 
     /**
      * @var array<string, mixed>
      */
-    protected array $viewData   = [];
+    protected array $viewData = [];
 
-    protected string $version   = '';
+    protected string $version = '';
     protected string $component = '';
 
     /**
@@ -89,9 +89,9 @@ class Response
         /** @var array{component: string, version: string, url: string, props: array<string, mixed>} */
         $page = [
             'component' => $this->component,
-            'props'     => $props,
-            'url'       => $request->getUri()->getPath(),
-            'version'   => $this->version,
+            'props' => $props,
+            'url' => $request->getUri()->getPath() . $request->getUri()->getFragment() . $request->getUri()->getQuery(),
+            'version' => $this->version,
         ];
 
         if (Http::isInertiaRequest($request)) {

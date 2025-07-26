@@ -11,9 +11,7 @@
 
 namespace Inertia;
 
-use Closure;
 use CodeIgniter\HTTP\RedirectResponse;
-use CodeIgniter\HTTP\Request;
 use CodeIgniter\HTTP\ResponseInterface;
 use Inertia\Config\Services;
 
