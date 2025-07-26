@@ -90,7 +90,7 @@ class Response
         $page = [
             'component' => $this->component,
             'props' => $props,
-            'url' => $request->getUri()->getPath() . $request->getUri()->getFragment() . $request->getUri()->getQuery(),
+            'url' => $request->getUri()->getPath() . "#{$request->getUri()->getFragment()}" . "?{$request->getUri()->getQuery()}",
             'version' => $this->version,
         ];
 
