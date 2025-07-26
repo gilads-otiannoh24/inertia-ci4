@@ -86,11 +86,16 @@ class Response
             $prop = Arr::value($prop);
         });
 
+        $fragment = $request->getUri()->getFragment();
+        $query = $request->getUri()->getQuery();
+
+        $url = $request->getUri()->getPath() . ($fragment ? "#{$fragment}" : "") . ($query ? "?{$query}" : "");
+
         /** @var array{component: string, version: string, url: string, props: array<string, mixed>} */
         $page = [
             'component' => $this->component,
             'props' => $props,
-            'url' => $request->getUri()->getPath() . "#{$request->getUri()->getFragment()}" . "?{$request->getUri()->getQuery()}",
+            'url' => $url,
             'version' => $this->version,
         ];
 
