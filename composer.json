@@ -3,7 +3,7 @@
   "description": "The Codeigniter 4 adapter for inertia.js forked from fabithub/inertia-ci4",
   "license": "MIT",
   "type": "library",
-  "version": "0.0.2",
+  "version": "0.0.3.0",
   "authors": [
     {
       "name": "Ian Oching",
