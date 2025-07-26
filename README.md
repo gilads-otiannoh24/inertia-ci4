@@ -34,3 +34,20 @@ Install via Composer:
 ```bash
 composer require jengo/inertia-ci4
 ```
+
+Configuration
+Follow the original steps, or update here if anything changed.
+
+## 🧑‍💻 Credits
+
+### Original Authors:
+
+Fab IT Hub
+Krishna Gujjjar
+
+Fork Maintainer:
+Ian Ochieng
+
+## 📄 License
+
+This project is open-sourced under the MIT license.
